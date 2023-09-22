@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *, :before, :after{ */
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}
+h1{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #011b8f;
+}
+h2{
+  font-size: 2rem;
+  font-weight: bold;
+}
+header{
+  color: white;
+  background: #011b8f;
+  padding: .4rem .8rem;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+nav a{
+  display: inline-block;
+  font-size: 1.1rem;
+  padding: 4px 8px;
+}
+nav a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  background-color: #f55;
+  height: 2px;
+  transition: .6s;
+}
+nav a:hover::after{
+  width: 100%;
+}
+/*======== HAMBURGER ========*/
+.navHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuContainer {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  gap: 10px;
+}
+.hamburger{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  outline: 2px solid #fff;
+  padding: 0 4px;
+  cursor: pointer;
+  z-index: 10;
+}
+.hamburger:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  animation: hamburger-pulse 1s infinite;
+}
+.bar{
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.bar::before,
+.bar::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  display: block;
+  transition: .8s;
+  border-radius: 2px;
+}
+.bar::before{
+  transform: translateY(-6px);
+  margin-left: auto;
+}
+.bar::after{
+  transform: translateY(3px);
+}
+.hamburger.active .bar::before,
+.hamburger.active .bar::after{
+  width: 40%;
+}
+/* .hamburger.active{
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+} */
+/*======== PROFILE ========*/
+.dp{
+  width: 36px;
+  height: 36px;
+  padding: 2px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.login-header {
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+.btn{
+  padding: .1rem .4rem;
+  background: #011b8f;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn2{
+  background: #8f1101;
+}
+.btn:hover{
+  background: #006;
+}
+.error {
+  color: red;
+  font-size: .8rem;
+  padding-inline: .4rem;
+}
+.form-container{
+  width: 50%;
+  margin: 40px auto;
+  display: grid;
+  outline: 4px solid #011b8f;
+  outline-offset: -2px;
+  border-radius: 5px;
+}
+.form-container input,
+.form-container textarea{
+  outline: 0;
+  border: 2px solid #011b8f;
+  padding: .1rem .3rem;
+}
+.desc{
+  height: 300px;
+}
+.fa-heart{
+  color: #fff;
+}
+.liked.fa-heart{
+  color: #f00;
+}
+/*======= MAIN CONTAINER =======*/
+main {
+  min-height: 64vh;
+}
+.postContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;  
+  min-height: 69vh;
+}
+.post {
+  display: grid;
+  background-color: gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+.post h1 {
+  font-size: 1.8rem;
+  line-height: 1.9rem;
+  margin-bottom: 10px;
+}
+.post .footer {
+  align-self: end;
+  border-top: 1px solid #fff;
+  margin-top: 10px;
+}
+.post .user {
+  font-weight: bold;
+}
+/*============ FOOTER SECTION ============*/
+footer {
+  text-align: center;
+  padding: 1rem .8rem;
+  background-color: #011b8f;
+  color: #fff;
+}
+.social-icons{
+  width: fit-content;
+  margin: 1rem auto;
+  display: flex;
+  gap: 10px;
+  font-size: 2rem;
+}
+.social-icons .fab{
+  transition: .8s;
+  color: gray;
+}
+.social-icons .fab:hover{
+  transform: translateY(-8px);
+  color: #fff;
+}
+footer p{
+  /* padding: 1rem .8rem; */
+  font-size: 1.1rem;
+}
+/*============ MEDIA QUERY ============*/
+@media screen and (max-width: 1100px) {
+  .postContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 780px) {
+  .postContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ @media screen and (max-width: 700px) {
+ .menu{
+    width: 70%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #011b8f;
+    transition: 1s;
+    z-index: 5;
+
+    display: grid;
+    align-content: space-evenly;
+    justify-content: center;
+  }
+ .menuContainer.active .menu{
+    right: 0%;
+  }
+  nav a{
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin-inline: auto;
+  }
+  .account {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .hamburger {
+    display: flex;
+  }
+} 
+@media screen and (max-width: 528px) {
+  .postContainer {
+    grid-template-columns: 1fr;
+  }
+  .form-container{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .menu {
+    width: 100%;
+  }
+}
+
+/*============ ANIMATION ============*/
+@keyframes hamburger-pulse{
+  0%{
+      opacity: 1;
+      transform: scale(1);
+  }
+  100%{
+      opacity: 0;
+      transform: scale(1.4);
+  }
+}
