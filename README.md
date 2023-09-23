@@ -4,7 +4,7 @@ Create Post App is a social media app, where users will have to login with their
 And then, they will have the rights to create a post, like or unlike posts, both the ones created by them or another.
 
 ## LINK
-  **[Create-Post](https:///)**
+  **[Create-Post](https://)**
 
 
 ## TECHNOLOGY
