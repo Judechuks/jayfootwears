@@ -16,6 +16,6 @@ This project was done using:
 ### 4. FIREBASE
 
 ## SETUP:
-## React + Vite + Tailwind Css
+## React + Vite + Tailwind CSS
 ## React and its Hooks
 ## Firebase and its Tools
