@@ -15,7 +15,7 @@ with the following features:
 
 ### LINK
 
-**[JAYFOOTWEARS](https://judechuks.github.io/jayfootwears)**
+**[JAYFOOTWEARS](https://jayfootwears.netlify.app)**
 
 ### TECHNOLOGY
 
