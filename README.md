@@ -1,21 +1,42 @@
-# CREATE-POST-APP
+## JAYFOOTWEARS
 
-Create Post App is a social media app, where users will have to login with their google account.
-And then, they will have the rights to create a post, like or unlike posts, both the ones created by them or another.
+---
 
-## LINK
-  **[Create-Post](https://)**
+An online store/website for buying elegant shoes of different types and sizes.
+with the following features:
 
+- ##### Pagination for the different shoes
 
-## TECHNOLOGY
-This project was done using:
+- ##### Info page
 
-### 1. HTML
-### 2. CSS (TAILWINDCSS)
-### 3. JAVASCRIPT (REACT & TYPESCRIPT)
-### 4. FIREBASE
+- ##### Add to cart
 
-## SETUP:
-## React + Vite + Tailwind CSS
-## React and its Hooks
-## Firebase and its Tools
+- ##### An alert message
+
+### LINK
+
+**[JAYFOOTWEARS](https://judechuks.github.io/jayfootwears)**
+
+### TECHNOLOGY
+
+This project was built using:
+
+##### 1. HTML
+
+##### 2. CSS (TAILWINDCSS)
+
+##### 3. JAVASCRIPT (REACT)
+
+### SETUP:
+
+- ##### React + Vite + Tailwind CSS
+
+### React and its Hooks
+
+- ##### useState
+
+- ##### useRef
+
+- ##### react router
+
+- ##### create & useContext
